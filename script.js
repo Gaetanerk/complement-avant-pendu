@@ -50,32 +50,23 @@ console.log(resulto2);
 const sound = new Audio("./audio/Duck.mp3");
 // sound.play();
 
-// const sound = new Audio("./audio/Duck.mp3");
-// btnPlay.addEventListener("click", () => {
-//   sound.play();
-// });
-
-// btnPlay.addEventListener("click", () => {
-//   pause.play();
-// });
-
-btnPause.oclick = function () {
+btnPlay.onclick = function () {
   //je lance la lecture de mon mp3
   sound.play();
 };
 
-btnPause.oclick = function () {
+btnPause.onclick = function () {
   //je mets en pause la lecture de mon mp3
   sound.pause();
 };
 
-btnStop.oclick = function () {
+btnStop.onclick = function () {
   //je stoppe la lecture de mon mp3
   sound.pause();
   sound.currentTime = 0;
 };
 
-btnStopInterval.oclick = function () {
+btnStopInterval.onclick = function () {
   //j'arrete mon intervalle
   clearInterval(myInterval);
 };
@@ -88,7 +79,7 @@ let myInterval = setInterval(function () {
   //color : rgb(x,y,z) ou x,y,z compris entre 0 et 255
   btnPause.style =
     "color : rgb(" + randomRed + "," + randomGreen + "," + randomBlue + ")";
-}, 500);
+}, 200);
 
 input.onkeyup = function (e) {
   if (e.key === "Enter") {
